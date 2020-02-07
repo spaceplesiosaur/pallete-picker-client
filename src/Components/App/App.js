@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.scss';
 
+import Nav from '../Nav/Nav';
+
 function App() {
   return (
     <main className="App">
-      <h1> IN </h1>
+       <Nav />
+       <section className='palette-info'>
+
+       </section>
     </main>
   );
 }
