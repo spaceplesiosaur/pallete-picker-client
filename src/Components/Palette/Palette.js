@@ -5,7 +5,7 @@ import { FiLock, FiUnlock } from 'react-icons/fi';
 const Palette = ({ color1, color2, color3, color4, color5 }) => {
     console.log(color1)
     return (
-      <section style={{backgroundColor:`${color1}`}} >
+      <section clasName='palette' style={{backgroundColor:`${color1}`}} >
        
         <FiLock />
         <p>HexCode: #{color1}</p>
