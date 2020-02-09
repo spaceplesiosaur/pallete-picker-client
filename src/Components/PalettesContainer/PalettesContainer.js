@@ -1,6 +1,10 @@
 import React, { useReducer } from 'react';
 import './PalettesContainer.scss';
 
+import Palette from '../Palette/Palette';
+// import SavePaletteForm from '../SavePaletteForm/SavePaletteForm';
+// import GeneratePalette from '../GeneratePalette/GeneratePalette';
+
 const paletteReducer = (state, action) => {
   switch(action.type) {
       case 'palettes':
@@ -33,7 +37,7 @@ const PalettesContainer = () => {
 
     return (
       <section>
-
+          <Palette /> 
       </section>
     );
 }
