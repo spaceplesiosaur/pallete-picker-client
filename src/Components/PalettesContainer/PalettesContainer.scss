@@ -1,4 +1,9 @@
 .palette-container {
     width: 50%;
     padding: 20px;
+    .generate-pal {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px;
+    }
 }
