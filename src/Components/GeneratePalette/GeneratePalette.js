@@ -3,7 +3,7 @@ import './GeneratePalette.scss';
 
 const GeneratePalette = () => {
     return ( 
-      <button> Generate Palette !</button>
+      <button className='generate-button'> Generate Palette !</button>
     )
 }
 
