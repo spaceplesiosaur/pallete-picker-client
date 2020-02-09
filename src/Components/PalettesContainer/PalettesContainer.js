@@ -33,11 +33,13 @@ const PalettesContainer = () => {
     color3: "#B3C0F7",
     color4: "#4B93FB",
     color5: "#00A8CF"
-  }]
+  }];
+
+  const thePalette = allPalettes.map((palette) => <Palette key={palette.name} {...palette} /> )
 
     return (
       <section>
-          <Palette /> 
+         {thePalette}
       </section>
     );
 }
