@@ -3,7 +3,7 @@ import './PalettesContainer.scss';
 
 import Palette from '../Palette/Palette';
 import SavePaletteForm from '../SavePaletteForm/SavePaletteForm';
-// import GeneratePalette from '../GeneratePalette/GeneratePalette';
+import GeneratePalette from '../GeneratePalette/GeneratePalette';
 
 const paletteReducer = (state, action) => {
   switch(action.type) {
@@ -41,6 +41,7 @@ const PalettesContainer = () => {
       <section className='palette-container'>
          {thePalette}
          <SavePaletteForm />
+         <GeneratePalette />
       </section>
     );
 }
