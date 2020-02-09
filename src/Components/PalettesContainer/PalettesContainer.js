@@ -38,7 +38,7 @@ const PalettesContainer = () => {
   const thePalette = allPalettes.map((palette) => <Palette key={palette.name} {...palette} /> )
 
     return (
-      <section>
+      <section className='palette-container'>
          {thePalette}
       </section>
     );
