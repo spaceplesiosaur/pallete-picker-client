@@ -10,6 +10,9 @@ function App() {
        <Nav />
        <section className='palette-info'>
           <PalettesContainer />
+        </section>
+       <section className='main-project-info'>
+         <ProjectsContainer />
        </section>
     </main>
   );
