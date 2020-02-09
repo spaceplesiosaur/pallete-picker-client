@@ -39,9 +39,11 @@ const PalettesContainer = () => {
 
     return (
       <section className='palette-container'>
-         {thePalette}
+          <div className='generate-pal'>
+            {thePalette}
+            <GeneratePalette />
+          </div>
          <SavePaletteForm />
-         <GeneratePalette />
       </section>
     );
 }
