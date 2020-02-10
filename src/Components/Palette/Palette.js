@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Palette.scss';
 import { FiLock, FiUnlock } from 'react-icons/fi';
 
