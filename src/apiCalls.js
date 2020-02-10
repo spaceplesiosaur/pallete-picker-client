@@ -38,4 +38,5 @@ export const deleteProject = (id) => {
         }
         return 'Post deleted!'
   })
+  return deleteAction
 }
