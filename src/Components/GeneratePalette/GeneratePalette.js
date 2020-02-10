@@ -1,9 +1,9 @@
 import React from 'react';
 import './GeneratePalette.scss';
 
-const GeneratePalette = () => {
-    return ( 
-      <button className='generate-button'> Generate Palette !</button>
+const GeneratePalette = ({ randomizeColors }) => {
+    return (
+      <button className='generate-button' onClick={() => randomizeColors()}> Generate Palette !</button>
     )
 }
 

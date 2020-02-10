@@ -7,7 +7,7 @@ import GeneratePalette from '../GeneratePalette/GeneratePalette';
 
 const PalettesContainer = () => {
 
-  const colorListState = useState([{name: "color1", color: "", frozen: false}, {name: "color2", color: "", frozen: false}, {name: "color3", color: "", frozen: false}, {name: "color4", color: "", frozen: false}, {name: "color5", color: "", frozen: false} ])
+  const colorListState = useState([{name: "color1", color: "#000000", frozen: false}, {name: "color2", color: "#ffffff", frozen: false}, {name: "color3", color: "#000000", frozen: false}, {name: "color4", color: "#ffffff", frozen: false}, {name: "color5", color: "#000000", frozen: false} ])
   const colorList = colorListState[0]
   const changeColor = colorListState[1]
 
@@ -18,6 +18,19 @@ const PalettesContainer = () => {
       }
     })
     changeColor(updatedColors)
+  }
+
+  const randomizeColors = () => {
+    let randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+
+    const newColors = colorList.map(palette => {
+      if (palette.frozen === false) {
+        palette.color = randomColor
+      } else {
+        palette.color = palette.color
+      }
+    })
+     changeColor(newColors)
   }
 
   const makeColors = () => {
@@ -34,7 +47,9 @@ const PalettesContainer = () => {
       <section className='palette-container'>
           <div className='generate-pal'>
             {makeColors()}
-            <GeneratePalette />
+            <GeneratePalette
+              randomizeColors={randomizeColors}
+            />
           </div>
          <SavePaletteForm />
       </section>
