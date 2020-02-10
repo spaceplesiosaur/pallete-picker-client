@@ -7,21 +7,33 @@ import GeneratePalette from '../GeneratePalette/GeneratePalette';
 
 const PalettesContainer = () => {
 
-   const allPalettes = [{
-    name: "Ocean",
-    color1: "#DFE9FD",
-    color2: "#053BA7",
-    color3: "#B3C0F7",
-    color4: "#4B93FB",
-    color5: "#00A8CF"
-  }];
+  const colorListState = useState([{name: "color1", color: "", frozen: false}, {name: "color2", color: "", frozen: false}, {name: "color3", color: "", frozen: false}, {name: "color4", color: "", frozen: false}, {name: "color5", color: "", frozen: false} ])
+  const colorList = colorListState[0]
+  const changeColor = colorListState[1]
 
-  const thePalette = allPalettes.map((palette) => <Palette key={palette.name} {...palette} /> )
+  const freezeColor = (name) => {
+    const updatedColors = colorList.forEach(color => {
+      if (color.name === name) {
+        color.frozen = !color.frozen
+      }
+    })
+    changeColor(updatedColors)
+  }
+
+  const makeColors = () => {
+    return colorList.map((palette) => {
+      <Palette
+      key={palette.name}
+      freezeColor={freezeColor}
+      {...palette}
+      />
+    })
+  }
 
     return (
       <section className='palette-container'>
           <div className='generate-pal'>
-            {thePalette}
+            {makeColors()}
             <GeneratePalette />
           </div>
          <SavePaletteForm />
