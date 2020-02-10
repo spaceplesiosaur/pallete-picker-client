@@ -30,7 +30,7 @@ const ProjectsContainer = () => {
   }, [])
 
   const makeNewProject = async (name) => {
-    await postProject(name)
+    await postProject('https://palette-picker-ac.herokuapp.com/api/v1/projects', name, 'project')
     return await fetchProjects()
   }
 
