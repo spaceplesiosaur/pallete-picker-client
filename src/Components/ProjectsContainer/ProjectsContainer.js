@@ -31,7 +31,7 @@ const ProjectsContainer = () => {
 
   const makeNewProject = async (name) => {
     await postProject(name)
-    return fetchProjects()
+    return await fetchProjects()
   }
 
 
