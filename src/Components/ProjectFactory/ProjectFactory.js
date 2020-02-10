@@ -2,7 +2,7 @@ import React from 'react';
 import Project from '../Project/Project';
 import './ProjectFactory.scss'
 
-const ProjectFactory = ({ projects, palettes }) => {
+const ProjectFactory = ({ projects, palettes, removeProject }) => {
   const generateProjects = () => {
     return projects.map(project => {
       const matchingPalettes = palettes.filter(palette => {
@@ -12,7 +12,9 @@ const ProjectFactory = ({ projects, palettes }) => {
       return (
         <Project
           name={project.name}
+          id={project.id}
           palettes={matchingPalettes}
+          removeProject={removeProject}
         />
       )
     })

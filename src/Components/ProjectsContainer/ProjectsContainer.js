@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ProjectsForm from '../ProjectsForm/ProjectsForm'
 import ProjectFactory from '../ProjectFactory/ProjectFactory'
-import { getData, postProject } from '../../apiCalls.js'
+import { getData, postProject, deleteProject } from '../../apiCalls.js'
 import './ProjectsContainer.scss'
 
 const ProjectsContainer = () => {
@@ -34,6 +34,10 @@ const ProjectsContainer = () => {
     return await fetchProjects()
   }
 
+  const removeProject = async (id) => {
+    await deleteProject(id)
+    return await fetchProjects()
+  }
 
   return (
     <section className="project-info-page">
@@ -46,6 +50,7 @@ const ProjectsContainer = () => {
         <ProjectFactory
           projects={projects}
           palettes={palettes}
+          removeProject={removeProject}
         />
       </section>
     </section>
