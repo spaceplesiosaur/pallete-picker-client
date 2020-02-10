@@ -6,30 +6,46 @@ import './ProjectsContainer.scss'
 
 const ProjectsContainer = () => {
 
-  const getProjects = () => {
-    return getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects')
+  const projectState = useState([]);
+  const projects = projectState[0];
+  const setProjects = projectState[1];
+
+  const paletteState = useState([]);
+  const palettes = paletteState[0];
+  const setPalettes = paletteState[1];
+
+  const fetchProjects = async () => {
+    const fetchedProjects = await getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects')
+    setProjects(fetchedProjects)
   }
 
-  const makeNewProject = (name) => {
-    postProject(name)
-    return getProjects()
+  const fetchPalettes = async () => {
+    const fetchedPalettes = await getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'projects')
+    setPalettes(fetchedPalettes)
   }
 
-  const getPalettes = () => {
-    return getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'palettes')
+  useEffect(async () => {
+    await fetchProjects()
+    await fetchPalettes()
+  }, [])
+
+  const makeNewProject = async (name) => {
+    await postProject(name)
+    return fetchProjects()
   }
+
 
   return (
     <section className="project-info-page">
       <section className="projectsForm">
         <ProjectsForm
-          makeNewProject={makeNewProjects}
+          addNewProject={makeNewProject}
         />
       </section>
       <section className="projectsList">
         <ProjectFactory
-          projects={getProjects()}
-          getPalettes={getPalettes}
+          projects={projects}
+          palettes={palettes}
         />
       </section>
     </section>

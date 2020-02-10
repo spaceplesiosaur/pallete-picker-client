@@ -9,7 +9,7 @@ export const getData = (url, type) => {
 }
 
 
-export const postProject = (project) => {
+export const postProject = async (project) => {
   const options = {
     method: 'POST',
     body: JSON.stringify(project),
@@ -32,7 +32,7 @@ export const deleteProject = (id) => {
       'Content-Type': 'application/json'
     }
   }
-  const deleteAction = fetch(`https://palette-picker-ac.herokuapp.com/api/v1/projects/${id}`, options).then(reponse => {
+  const deleteAction = fetch(`https://palette-picker-ac.herokuapp.com/api/v1/projects/${id}`, options).then(response => {
     if (!response.ok) {
           throw Error('There was a problem with the delete')
         }

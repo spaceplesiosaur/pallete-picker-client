@@ -1,4 +1,6 @@
 import React from 'react';
+import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
+
 import './App.scss';
 
 import Nav from '../Nav/Nav';

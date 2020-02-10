@@ -11,7 +11,7 @@ const ProjectsForm = ({ addNewProject }) => {
     return setName(e.target.value)
   }
 
-  const addNewProject = (name) => {
+  const makeProject = (name) => {
     addNewProject({name: name})
   }
   return (
@@ -19,9 +19,11 @@ const ProjectsForm = ({ addNewProject }) => {
       <h2>Create New Project</h2>
       <div className="formBox">
         <label for="name">Name</label>
-        <input className="formInput" type="text" name="name" value={name} onChange={handleNameChange}><input>
-        <button onClick={addNewProject}>Save Project</button>
+        <input className="formInput" type="text" name="name" value={name} onChange={handleNameChange}></input>
+        <button onClick={makeProject}>Save Project</button>
       </div>
     </section>
   )
 }
+
+export default ProjectsForm

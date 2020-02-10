@@ -1,15 +1,14 @@
 import React from 'react';
 import Project from '../Project/Project';
-import './Project.scss'
+import './ProjectFactory.scss'
 
-const ProjectFactory = ({ projects, getPalettes }) => {
+const ProjectFactory = ({ projects, palettes }) => {
   const generateProjects = () => {
-    projects.map(project => {
-      const matchingPalettes = () => {
-        getPalletes().map(palette => {
+    return projects.map(project => {
+      const matchingPalettes = palettes.filter(palette => {
           return palette.project_id === project.id
         })
-      }
+
       return (
         <Project
           name={project.name}
@@ -18,9 +17,11 @@ const ProjectFactory = ({ projects, getPalettes }) => {
       )
     })
   }
-  return {
+  return (
     <section className="project-factory-renderArea">
       {generateProjects()}
     </section>
-  }
+  )
 }
+
+export default ProjectFactory
