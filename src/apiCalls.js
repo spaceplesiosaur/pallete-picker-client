@@ -9,18 +9,18 @@ export const getData = (url, type) => {
 }
 
 
-export const postProject = async (project) => {
+export const postProject = async (url, body, type) => {
   const options = {
     method: 'POST',
-    body: JSON.stringify(project),
+    body: JSON.stringify(body),
     headers: {
       'Content-Type': 'application/json'
     }
   };
-  const post = await fetch('https://palette-picker-ac.herokuapp.com/api/v1/projects', options)
+  const post = await fetch(url, options)
   const newProject = await post.json()
     if(!post.ok) {
-      throw Error('Error fetching project');
+      throw Error(`Error fetching ${type}`);
     }
     return newProject;
 }
@@ -38,21 +38,5 @@ export const deleteProject = (id) => {
         }
         return 'Post deleted!'
   })
-}
-
-
-export const postPalette = async (palette) => {
-  const options = {
-    method: 'POST',
-    body: JSON.stringify(palette),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  };
-  const postPalette = await fetch('https://palette-picker-ac.herokuapp.com/api/v1/palettes', options)
-  const fetchedPalette = await postPalette.json()
-    if(!postPalette.ok) {
-      throw Error('Error fetching palette');
-    }
-    return fetchedPalette;
+  return deleteAction
 }

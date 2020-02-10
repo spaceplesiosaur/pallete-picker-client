@@ -11,8 +11,9 @@ const ProjectsForm = ({ addNewProject }) => {
     return setName(e.target.value)
   }
 
-  const makeProject = (name) => {
+  const makeProject = () => {
     addNewProject({name: name})
+    setName('')
   }
   return (
     <section className="projects-name-form">
