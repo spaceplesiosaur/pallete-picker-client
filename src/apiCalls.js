@@ -39,3 +39,20 @@ export const deleteProject = (id) => {
         return 'Post deleted!'
   })
 }
+
+
+export const postPalette = async (palette) => {
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(palette),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  const postPalette = await fetch('https://palette-picker-ac.herokuapp.com/api/v1/palettes', options)
+  const fetchedPalette = await postPalette.json()
+    if(!postPalette.ok) {
+      throw Error('Error fetching palette');
+    }
+    return fetchedPalette;
+}
