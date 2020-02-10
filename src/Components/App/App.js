@@ -1,4 +1,6 @@
 import React from 'react';
+import ProjectsContainer from '../ProjectsContainer/ProjectsContainer';
+
 import './App.scss';
 
 import Nav from '../Nav/Nav';
@@ -10,6 +12,9 @@ function App() {
        <Nav />
        <section className='palette-info'>
           <PalettesContainer />
+        </section>
+       <section className='main-project-info'>
+         <ProjectsContainer />
        </section>
     </main>
   );
