@@ -22,6 +22,7 @@ const SavePaletteForm = ({ colorList }) => {
         });
 
         let palettes = {
+            // project_id;
             name: paletteName,
             color1: completeColours[0],
             color2: completeColours[1],
