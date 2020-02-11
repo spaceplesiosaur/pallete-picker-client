@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './SavePaletteForm.scss';
 
-const SavePaletteForm = () => {
+import { postProject } from '../../apiCalls';
+
+const SavePaletteForm = ({ colorList }) => {
 
    const [paletteName, setPaletteName] = useState('');
    
@@ -12,10 +14,27 @@ const SavePaletteForm = () => {
     // var that maps through the projects and add inside select
         // projects.map --> <option> project.name </option>
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
        e.preventDefault();
-       
+       postPalette();
        setPaletteName('');
+    }
+
+    const postPalette = async () => {
+        let completeColours = colorList.map((palette) => {
+            return palette.color;
+        });
+
+        let palettes = {
+            name: paletteName,
+            color1: completeColours[0],
+            color2: completeColours[1],
+            color3: completeColours[2],
+            color4: completeColours[3],
+            color5: completeColours[4]
+          };
+    
+      await postProject('https://palette-picker-ac.herokuapp.com/api/v1/palettes', palettes, 'palettes');
     }
 
     return (
