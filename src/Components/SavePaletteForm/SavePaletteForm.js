@@ -7,10 +7,6 @@ const SavePaletteForm = ({ colorList }) => {
 
    const [paletteName, setPaletteName] = useState('');
    
-    // build a method that posts the palette on click of saved palette
-
-    // if input is empty, disable button
-
     // var that maps through the projects and add inside select
         // projects.map --> <option> project.name </option>
 
@@ -37,6 +33,8 @@ const SavePaletteForm = ({ colorList }) => {
       await postProject('https://palette-picker-ac.herokuapp.com/api/v1/palettes', palettes, 'palettes');
     }
 
+    const disableBtn = paletteName.length ? false : true;
+
     return (
        <form className='palette-form'>
            <select>
@@ -47,7 +45,7 @@ const SavePaletteForm = ({ colorList }) => {
                   value={paletteName} 
                   onChange={(e) => setPaletteName(e.target.value)} 
             />
-           <button onClick={handleSubmit}>Save Palette</button>
+           <button disabled={disableBtn} onClick={handleSubmit}>Save Palette</button>
        </form>
     ) 
 };
