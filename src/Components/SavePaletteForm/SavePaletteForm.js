@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './SavePaletteForm.scss';
 
 import { postProject } from '../../apiCalls';
+import { allSetProjects } from '../../reducers/projectsReducer';
+import { connect } from 'react-redux';
 
 const SavePaletteForm = ({ colorList }) => {
 
@@ -51,4 +53,8 @@ const SavePaletteForm = ({ colorList }) => {
     ) 
 };
 
-export default SavePaletteForm;
+const mapStateToProps = ({allSetProjects}) => ({
+    allSetProjects
+})
+
+export default connect(mapStateToProps)(SavePaletteForm);
