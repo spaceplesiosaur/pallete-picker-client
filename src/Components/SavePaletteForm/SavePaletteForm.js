@@ -29,7 +29,7 @@ const SavePaletteForm = ({ colorList, allSetProjects }) => {
 
 
         let palettes = {
-            project_id: projectID,
+            project_id: 12,
             name: paletteName,
             color1: completeColours[0],
             color2: completeColours[1],
