@@ -4,13 +4,13 @@ import { FiLock, FiUnlock } from 'react-icons/fi';
 
 
 const Palette = ({ name, color, frozen, freezeColor }) => {
-  
-   const toggleIcon = frozen ? <FiLock/> : <FiUnlock/>;
+
+   const toggleIcon = frozen ? <FiLock /> : <FiUnlock />;
 
   return (
     <section className='palette' style={{backgroundColor:`${color}`}} onClick={() => freezeColor(name)}>
       {toggleIcon }
-      <p>HexCode: {color}</p>
+      <p>Hex-Code: {color}</p>
     </section>
   )
 };
