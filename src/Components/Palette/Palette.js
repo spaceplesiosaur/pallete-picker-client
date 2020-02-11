@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Palette.scss';
 import { FiLock, FiUnlock } from 'react-icons/fi';
 
-const Palette = ({ color1, color2, color3, color4, color5 }) => {
-    console.log(color1)
-    return (
-      <section className='palette' style={{backgroundColor:`${color1}`}} >
-       
-        <FiLock />
-        <p>HexCode: {color1}</p>
-      </section>
-    )
+
+const Palette = ({ name, color, frozen, freezeColor }) => {
+
+  return (
+    <section className='palette' style={{backgroundColor:`${color}`}} onClick={() => freezeColor(name)}>
+
+      <FiLock />
+      <p>HexCode: {color}</p>
+    </section>
+  )
 };
+
 
 export default Palette;
