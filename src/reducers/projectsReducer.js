@@ -1,4 +1,4 @@
-export const allSetProjects = (state=[], action) => {
+export const allSetProjects = ( state=[] , action) => {
   switch(action.type) {
      case 'ADD_PROJECTS':
         return action.projects;

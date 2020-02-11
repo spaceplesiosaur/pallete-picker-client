@@ -4,9 +4,10 @@ import './SavePaletteForm.scss';
 import { postProject } from '../../apiCalls';
 import { connect } from 'react-redux';
 
-const SavePaletteForm = ({ colorList }) => {
+const SavePaletteForm = ({ colorList, allSetProjects }) => {
 
    const [paletteName, setPaletteName] = useState('');
+   const [projectID, setProjectID] = useState('')
     
     // const projectNames = () => {
     //    return allSetProjects.map((project) => {
@@ -16,10 +17,9 @@ const SavePaletteForm = ({ colorList }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // const { allSetProjects } = this.props;
        postPalette();
        setPaletteName('');
-    //    console.log(allSetProjects)
+       console.log(allSetProjects)
     }
 
     const postPalette = async () => {
@@ -29,7 +29,7 @@ const SavePaletteForm = ({ colorList }) => {
 
 
         let palettes = {
-            // project_id;
+            project_id: projectID,
             name: paletteName,
             color1: completeColours[0],
             color2: completeColours[1],
@@ -42,11 +42,19 @@ const SavePaletteForm = ({ colorList }) => {
     }
 
     const disableBtn = paletteName.length ? false : true;
+    const displayProjects = () => {
+        console.log('HI', allSetProjects)
+       return allSetProjects.map(project => {
+           return (
+            <option value={project.id} onClick={() => {setProjectID(project.id)}}>{project.name}</option>
+           )
+       })
+    }
 
     return (
        <form className='palette-form'>
            <select>
-              {/* {projectNames} */}
+              {displayProjects()}
            </select>
            <input type='text' 
                   placeholder='Add Palette Name'
@@ -62,4 +70,4 @@ const mapStateToProps = ({allSetProjects}) => ({
     allSetProjects
 })
 
-export default connect(mapStateToProps)(SavePaletteForm);
+export default connect(mapStateToProps, null)(SavePaletteForm);

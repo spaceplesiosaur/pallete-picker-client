@@ -7,7 +7,7 @@ import { setAllProjects } from '../../actions';
 import { bindActionCreators } from 'redux';
 import './ProjectsContainer.scss';
 
-const ProjectsContainer = () => {
+const ProjectsContainer = ({setAllProjects}) => {
 
   const projectState = useState([]);
   const projects = projectState[0];
@@ -20,6 +20,7 @@ const ProjectsContainer = () => {
   const fetchProjects = async () => {
     const fetchedProjects = await getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects');
     setProjects(fetchedProjects);
+    console.log(fetchedProjects);
     setAllProjects(fetchedProjects);
   }
 
