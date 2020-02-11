@@ -21,59 +21,31 @@ const PalettesContainer = () => {
   }
 
   const randomizeColors = () => {
-    let randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
-
     const newColors = colorList.map(palette => {
-      console.log('PALETTE', palette)
       if (palette.frozen === false) {
-        console.log('RANDO', randomColor)
         palette.color = `#${Math.floor(Math.random()*16777215).toString(16)}`
-        console.log('RANDO', palette.color)
       } else {
         palette.color = palette.color
       }
       return palette;
     })
 
-    console.log('NEW', newColors)
      changeColor(newColors)
   }
 
-
-    // const makeColors = colorList.map((palette) => {
-    //       return (
-    //         <Palette
-    //           key={palette.name}
-    //           freezeColor={freezeColor}
-    //           {...palette}
-    //       />
-    //     )
-    //   })
-
-  const makeColors = () => {
-    if (colorList) {
-      return colorList.map((palette) => {
-        console.log('PALETTE', palette)
+  const makeColors = colorList.map((palette) => {
         return (
           <Palette
-
             freezeColor={freezeColor}
             {...palette}
         />
-      )
-      })
-    } else {
-      return (
-        <p>LOADING...</p>
-      )
-    }
-
-  }
+         )
+  });
 
     return (
       <section className='palette-container'>
           <div className='generate-pal'>
-            {makeColors()}
+            {makeColors}
             <GeneratePalette
               randomizeColors={randomizeColors}
             />
