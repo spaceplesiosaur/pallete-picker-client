@@ -7,7 +7,6 @@ const SavePaletteForm = () => {
    
     // build a method that posts the palette on click of saved palette
 
-
     // if input is empty, disable button
 
     // var that maps through the projects and add inside select
@@ -15,7 +14,7 @@ const SavePaletteForm = () => {
 
     const handleSubmit = (e) => {
        e.preventDefault();
-
+       
        setPaletteName('');
     }
 
@@ -25,6 +24,7 @@ const SavePaletteForm = () => {
 
            </select>
            <input type='text' 
+                  placeholder='Add Palette Name'
                   value={paletteName} 
                   onChange={(e) => setPaletteName(e.target.value)} 
             />
