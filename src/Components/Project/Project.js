@@ -3,7 +3,6 @@ import { getData } from '../../apiCalls.js'
 import './Project.scss'
 
 const Project = ({ name, palettes, removeProject, id }) => {
-  console.log('PAL', palettes)
   const generatePalettes = () => {
     return palettes.map(palette => {
       const colorList = [palette.color1, palette.color2, palette.color3, palette.color4, palette.color5]

@@ -8,7 +8,7 @@ export const addPalettes = (palette) => ({
     palette
 });
 
-export const setProjects = (projects) => ({
+export const setAllProjects = (projects) => ({
    type: 'ADD_PROJECTS',
    projects
 });
