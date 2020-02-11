@@ -12,10 +12,11 @@ const PalettesContainer = () => {
   const changeColor = colorListState[1];
 
   const freezeColor = (name) => {
-    const updatedColors = colorList.forEach(color => {
+    const updatedColors = colorList.map(color => {
       if (color.name === name) {
         color.frozen = !color.frozen
       }
+      return color;
     });
     changeColor(updatedColors)
   }
