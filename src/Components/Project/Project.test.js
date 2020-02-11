@@ -6,6 +6,7 @@ describe('Project', () => {
   let wrapper;
   let mockProject;
   let mockMatchedPalettes;
+  let fakeRemoveFunction = jest.fn()
 
   beforeEach(() => {
     mockProject = {
@@ -40,12 +41,18 @@ describe('Project', () => {
       name={mockProject.name}
       id={mockProject.id}
       palettes={mockMatchedPalettes}
-      removeProject={jest.fn()}
+      removeProject={fakeRemoveFunction}
        />)
 
   })
 
   it('should render with the correct properites', () => {
     expect(wrapper).toMatchSnapshot();
+  })
+
+  it('should call addNewProject when button is clicked', () => {
+    wrapper.find('.project-delete-button').simulate('click')
+
+    expect(fakeRemoveFunction).toHaveBeenCalled()
   })
 })
