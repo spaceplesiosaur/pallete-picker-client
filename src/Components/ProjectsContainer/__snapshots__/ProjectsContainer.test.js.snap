@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectsContainer should render with the correct properites 1`] = `
+<section
+  className="project-info-page"
+>
+  <section
+    className="projectsForm"
+  >
+    <ProjectsForm
+      addNewProject={[Function]}
+    />
+  </section>
+  <section
+    className="projectsList"
+  >
+    <ProjectFactory
+      palettes={Array []}
+      projects={Array []}
+      removeProject={[Function]}
+    />
+  </section>
+</section>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GeneratePalette should render with the correct properites 1`] = `
+<button
+  className="generate-button"
+  onClick={[Function]}
+>
+   Generate Palette !
+</button>
+`;

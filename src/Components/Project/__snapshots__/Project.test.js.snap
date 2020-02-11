@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project should render with the correct properites 1`] = `
+<section
+  className="projectContainer-project"
+>
+  <h2>
+    Bathroom walls
+  </h2>
+  <button
+    className="project-delete-button"
+    onClick={[Function]}
+  />
+  <div>
+    <section
+      className="project-palettes-palette"
+    >
+      <h3>
+        Ocean
+      </h3>
+      <ul>
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#DFE9FD",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#053BA7",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#B3C0F7",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#4B93FB",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#00A8CF",
+            }
+          }
+        />
+      </ul>
+      <img />
+    </section>
+    <section
+      className="project-palettes-palette"
+    >
+      <h3>
+        Seascape
+      </h3>
+      <ul>
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#180353",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#00A8CF",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#F7EDB7",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#EDE0D7",
+            }
+          }
+        />
+        <li
+          className="colorList-tile"
+          style={
+            Object {
+              "backgroundColor": "#DFE9FD",
+            }
+          }
+        />
+      </ul>
+      <img />
+    </section>
+  </div>
+</section>
+`;

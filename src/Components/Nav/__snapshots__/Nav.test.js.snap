@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav should render with the correct properites 1`] = `
+<nav>
+  <h1>
+    Palette Picker
+  </h1>
+</nav>
+`;

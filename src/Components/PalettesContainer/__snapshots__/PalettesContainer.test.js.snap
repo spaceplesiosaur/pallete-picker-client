@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PalettesContainer should render with the correct properites 1`] = `
+<section
+  className="palette-container"
+>
+  <div
+    className="generate-pal"
+  >
+    <div
+      className="pal"
+    >
+      <Palette
+        color="#000000"
+        freezeColor={[Function]}
+        frozen={false}
+        name="color1"
+      />
+      <Palette
+        color="#ffffff"
+        freezeColor={[Function]}
+        frozen={false}
+        name="color2"
+      />
+      <Palette
+        color="#000000"
+        freezeColor={[Function]}
+        frozen={false}
+        name="color3"
+      />
+      <Palette
+        color="#ffffff"
+        freezeColor={[Function]}
+        frozen={false}
+        name="color4"
+      />
+      <Palette
+        color="#000000"
+        freezeColor={[Function]}
+        frozen={false}
+        name="color5"
+      />
+    </div>
+    <GeneratePalette
+      randomizeColors={[Function]}
+    />
+  </div>
+  <SavePaletteForm />
+</section>
+`;

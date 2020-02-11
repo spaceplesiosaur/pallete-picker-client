@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectFactory should render with the correct properites 1`] = `
+<section
+  className="project-factory-renderArea"
+>
+  <Project
+    id={1}
+    name="Bathroom walls"
+    palettes={
+      Array [
+        Object {
+          "color1": "#DFE9FD",
+          "color2": "#053BA7",
+          "color3": "#B3C0F7",
+          "color4": "#4B93FB",
+          "color5": "#00A8CF",
+          "id": 4,
+          "name": "Ocean",
+          "project_id": 1,
+        },
+        Object {
+          "color1": "#180353",
+          "color2": "#00A8CF",
+          "color3": "#F7EDB7",
+          "color4": "#EDE0D7",
+          "color5": "#DFE9FD",
+          "id": 5,
+          "name": "Seascape",
+          "project_id": 1,
+        },
+      ]
+    }
+    removeProject={[MockFunction]}
+  />
+  <Project
+    id={2}
+    name="Kid bedroom"
+    palettes={
+      Array [
+        Object {
+          "color1": "#FA1E88",
+          "color2": "#ff6100",
+          "color3": "#F8DF3A",
+          "color4": "#B3C0F7",
+          "color5": "#000000",
+          "id": 6,
+          "name": "Sunset",
+          "project_id": 2,
+        },
+      ]
+    }
+    removeProject={[MockFunction]}
+  />
+  <Project
+    id={3}
+    name="Living room"
+    palettes={Array []}
+    removeProject={[MockFunction]}
+  />
+</section>
+`;
