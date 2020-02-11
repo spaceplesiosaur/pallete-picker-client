@@ -21,7 +21,7 @@ const ProjectsForm = ({ addNewProject }) => {
       <div className="formBox">
         <label for="name">Name</label>
         <input className="formInput" type="text" name="name" value={name} onChange={handleNameChange}></input>
-        <button onClick={makeProject}>Save Project</button>
+        <button onClick={makeProject} className="saveProjectButton">Save Project</button>
       </div>
     </section>
   )

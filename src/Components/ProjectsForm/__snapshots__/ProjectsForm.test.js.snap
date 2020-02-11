@@ -23,6 +23,7 @@ exports[`ProjectsForm should render with the correct properites 1`] = `
       value=""
     />
     <button
+      className="saveProjectButton"
       onClick={[Function]}
     >
       Save Project
