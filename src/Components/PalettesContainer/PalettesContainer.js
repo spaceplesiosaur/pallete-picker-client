@@ -35,6 +35,7 @@ const PalettesContainer = () => {
   const makeColors = colorList.map((palette) => {
         return (
           <Palette
+            key={palette.name}
             freezeColor={freezeColor}
             {...palette}
         />

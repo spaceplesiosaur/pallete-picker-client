@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './SavePaletteForm.scss';
 
 import { postProject } from '../../apiCalls';
-import { allSetProjects } from '../../reducers/projectsReducer';
 import { connect } from 'react-redux';
 
 const SavePaletteForm = ({ colorList }) => {
