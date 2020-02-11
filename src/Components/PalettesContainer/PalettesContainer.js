@@ -44,7 +44,9 @@ const PalettesContainer = () => {
     return (
       <section className='palette-container'>
           <div className='generate-pal'>
-            {makeColors}
+            <div className='pal'>
+              {makeColors}
+            </div>
             <GeneratePalette
               randomizeColors={randomizeColors}
             />
