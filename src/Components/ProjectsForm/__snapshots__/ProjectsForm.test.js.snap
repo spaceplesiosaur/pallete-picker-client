@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectsForm should render with the correct properites 1`] = `
+<section
+  className="projects-name-form"
+>
+  <h2>
+    Create New Project
+  </h2>
+  <div
+    className="formBox"
+  >
+    <label
+      for="name"
+    >
+      Name
+    </label>
+    <input
+      className="formInput"
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Save Project
+    </button>
+  </div>
+</section>
+`;

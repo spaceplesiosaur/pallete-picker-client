@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Palette should render with the correct properites 1`] = `
+<section
+  className="palette"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#DFE9FD",
+    }
+  }
+>
+  <FiUnlock />
+  <p>
+    Hex-Code: 
+    #DFE9FD
+  </p>
+</section>
+`;

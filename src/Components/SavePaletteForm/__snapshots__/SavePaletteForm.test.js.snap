@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavePaletteForm should render with the correct properites 1`] = `
+<form
+  className="palette-form"
+>
+  <select />
+  <input />
+  <button>
+    Save Palette
+  </button>
+</form>
+`;
