@@ -51,7 +51,7 @@ const PalettesContainer = () => {
               randomizeColors={randomizeColors}
             />
           </div>
-         <SavePaletteForm />
+         <SavePaletteForm colorList={colorList}/>
       </section>
     );
 }
