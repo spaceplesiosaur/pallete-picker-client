@@ -7,20 +7,26 @@ import { connect } from 'react-redux';
 const SavePaletteForm = ({ colorList }) => {
 
    const [paletteName, setPaletteName] = useState('');
-   
-    // var that maps through the projects and add inside select
-        // projects.map --> <option> project.name </option>
+    
+    // const projectNames = () => {
+    //    return allSetProjects.map((project) => {
+    //        return <option>{project.name}</option>
+    //    })
+    // };
 
     const handleSubmit = async (e) => {
-       e.preventDefault();
+        e.preventDefault();
+        // const { allSetProjects } = this.props;
        postPalette();
        setPaletteName('');
+    //    console.log(allSetProjects)
     }
 
     const postPalette = async () => {
         let completeColours = colorList.map((palette) => {
             return palette.color;
         });
+
 
         let palettes = {
             // project_id;
@@ -40,7 +46,7 @@ const SavePaletteForm = ({ colorList }) => {
     return (
        <form className='palette-form'>
            <select>
-
+              {/* {projectNames} */}
            </select>
            <input type='text' 
                   placeholder='Add Palette Name'
