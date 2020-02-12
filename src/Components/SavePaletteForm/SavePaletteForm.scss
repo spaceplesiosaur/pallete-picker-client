@@ -16,5 +16,8 @@
         border-radius: 10px;
         background-color: #FCC606;
         cursor: pointer;
+        &:hover {
+            border: 1px solid #69116D;
+        }
     }
  }
