@@ -9,17 +9,10 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
    const [paletteName, setPaletteName] = useState('');
    const [projectID, setProjectID] = useState('')
 
-    // const projectNames = () => {
-    //    return allSetProjects.map((project) => {
-    //        return <option>{project.name}</option>
-    //    })
-    // };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
        postPalette();
        setPaletteName('');
-       console.log(allSetProjects)
     }
 
     const postPalette = async () => {
@@ -27,9 +20,8 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
             return palette.color;
         });
 
-
         let palettes = {
-            project_id: 12,
+            project_id: projectID,
             name: paletteName,
             color1: completeColours[0],
             color2: completeColours[1],
@@ -41,20 +33,22 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
       await postProject('https://palette-picker-ac.herokuapp.com/api/v1/palettes', palettes, 'palettes');
     }
 
-    const disableBtn = paletteName.length ? false : true;
-    const displayProjects = () => {
-        console.log('HI', allSetProjects)
-       return allSetProjects.map(project => {
+    const displayProjects = allSetProjects.map(project => {
            return (
-            <option value={project.id} onClick={() => {setProjectID(project.id)}}>{project.name}</option>
+            <option key={project.id} value={project.id}>{project.name}</option>
            )
-       })
+    });
+
+    const chosenProject = (value) => {
+      setProjectID(value)
     }
 
+    const disableBtn = paletteName.length ? false : true;
     return (
        <form className='palette-form'>
-           <select>
-              {displayProjects()}
+           <select onChange={(e) => chosenProject(e.target.value)}>
+               <option>Choose Project</option>
+               {displayProjects}
            </select>
            <input type='text'
                   placeholder='Add Palette Name'
