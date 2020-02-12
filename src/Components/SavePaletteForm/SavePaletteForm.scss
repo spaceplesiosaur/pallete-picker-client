@@ -1,1 +1,20 @@
- 
+ .palette-form {
+    select{
+        font-size: 20px;
+        padding: 5px;
+    }
+    input {
+        font-size: 20px;
+        border: none;
+        margin: 0 10px 0 10px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    button {
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: #FCC606;
+        cursor: pointer;
+    }
+ }
