@@ -11,7 +11,7 @@ function App() {
     <main className="App">
        <Nav />
        <section className='palette-info'>
-          <PalettesContainer />
+         <PalettesContainer />
          <ProjectsContainer />
        </section>
     </main>

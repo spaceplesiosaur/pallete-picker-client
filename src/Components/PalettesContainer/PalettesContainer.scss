@@ -1,10 +1,13 @@
 .palette-container {
     width: 50%;
-    padding: 20px;
+    background-color: #80008091;
+    margin: 20px;
+    border-radius: 20px;
+    border-right: 3px solid #79189D;
     .generate-pal {
         display: flex;
         justify-content: space-around;
-        margin: 10px;
+        margin: 20px;
         .pal {
             width: 47%;
         }

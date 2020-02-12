@@ -45,7 +45,7 @@ export const ProjectsContainer = ({setAllProjects}) => {
   }
 
   return (
-    <section className="project-info-page">
+    <section className="info-page">
       <section className="projectsForm">
         <ProjectsForm
           addNewProject={makeNewProject}

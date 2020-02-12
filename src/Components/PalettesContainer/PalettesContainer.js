@@ -7,7 +7,7 @@ import GeneratePalette from '../GeneratePalette/GeneratePalette';
 
 const PalettesContainer = () => {
 
-  const colorListState = useState([{name: "color1", color: "#000000", frozen: false}, {name: "color2", color: "#ffffff", frozen: false}, {name: "color3", color: "#000000", frozen: false}, {name: "color4", color: "#ffffff", frozen: false}, {name: "color5", color: "#000000", frozen: false} ]);
+  const colorListState = useState([{name: "color1", color: "#B42D91", frozen: false}, {name: "color2", color: "#890CA6", frozen: false}, {name: "color3", color: "#B42D91", frozen: false}, {name: "color4", color: "#890CA6", frozen: false}, {name: "color5", color: "#B42D91", frozen: false} ]);
   const colorList = colorListState[0];
   const changeColor = colorListState[1];
 

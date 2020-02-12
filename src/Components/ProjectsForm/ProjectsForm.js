@@ -14,7 +14,7 @@ const ProjectsForm = ({ addNewProject }) => {
   const makeProject = () => {
     addNewProject({name: name})
     setName('')
-  }
+  } 
   return (
     <section className="projects-name-form">
       <h2>Create New Project</h2>

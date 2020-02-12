@@ -9,10 +9,17 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: #FCC606;
 }
 
 .palette-info {
   display: flex;
+  background-image: url('https://ak9.picdn.net/shutterstock/videos/28651609/thumb/1.jpg');
+    color: #FCC606;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 .main-project-palette {
