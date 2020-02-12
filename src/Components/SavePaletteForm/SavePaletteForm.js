@@ -4,11 +4,11 @@ import './SavePaletteForm.scss';
 import { postProject } from '../../apiCalls';
 import { connect } from 'react-redux';
 
-const SavePaletteForm = ({ colorList, allSetProjects }) => {
+export const SavePaletteForm = ({ colorList, allSetProjects }) => {
 
    const [paletteName, setPaletteName] = useState('');
    const [projectID, setProjectID] = useState('')
-    
+
     // const projectNames = () => {
     //    return allSetProjects.map((project) => {
     //        return <option>{project.name}</option>
@@ -37,7 +37,7 @@ const SavePaletteForm = ({ colorList, allSetProjects }) => {
             color4: completeColours[3],
             color5: completeColours[4]
           };
-    
+
       await postProject('https://palette-picker-ac.herokuapp.com/api/v1/palettes', palettes, 'palettes');
     }
 
@@ -56,14 +56,14 @@ const SavePaletteForm = ({ colorList, allSetProjects }) => {
            <select>
               {displayProjects()}
            </select>
-           <input type='text' 
+           <input type='text'
                   placeholder='Add Palette Name'
-                  value={paletteName} 
-                  onChange={(e) => setPaletteName(e.target.value)} 
+                  value={paletteName}
+                  onChange={(e) => setPaletteName(e.target.value)}
             />
            <button disabled={disableBtn} onClick={handleSubmit}>Save Palette</button>
        </form>
-    ) 
+    )
 };
 
 const mapStateToProps = ({allSetProjects}) => ({

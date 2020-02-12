@@ -9,7 +9,7 @@ exports[`App should render with the correct properites 1`] = `
     className="palette-info"
   >
     <PalettesContainer />
-    <ProjectsContainer />
+    <Connect(ProjectsContainer) />
   </section>
 </main>
 `;

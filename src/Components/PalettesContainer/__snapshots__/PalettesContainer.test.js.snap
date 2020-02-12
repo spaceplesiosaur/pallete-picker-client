@@ -14,30 +14,35 @@ exports[`PalettesContainer should render with the correct properites 1`] = `
         color="#000000"
         freezeColor={[Function]}
         frozen={false}
+        key="color1"
         name="color1"
       />
       <Palette
         color="#ffffff"
         freezeColor={[Function]}
         frozen={false}
+        key="color2"
         name="color2"
       />
       <Palette
         color="#000000"
         freezeColor={[Function]}
         frozen={false}
+        key="color3"
         name="color3"
       />
       <Palette
         color="#ffffff"
         freezeColor={[Function]}
         frozen={false}
+        key="color4"
         name="color4"
       />
       <Palette
         color="#000000"
         freezeColor={[Function]}
         frozen={false}
+        key="color5"
         name="color5"
       />
     </div>
@@ -45,6 +50,36 @@ exports[`PalettesContainer should render with the correct properites 1`] = `
       randomizeColors={[Function]}
     />
   </div>
-  <SavePaletteForm />
+  <Connect(SavePaletteForm)
+    colorList={
+      Array [
+        Object {
+          "color": "#000000",
+          "frozen": false,
+          "name": "color1",
+        },
+        Object {
+          "color": "#ffffff",
+          "frozen": false,
+          "name": "color2",
+        },
+        Object {
+          "color": "#000000",
+          "frozen": false,
+          "name": "color3",
+        },
+        Object {
+          "color": "#ffffff",
+          "frozen": false,
+          "name": "color4",
+        },
+        Object {
+          "color": "#000000",
+          "frozen": false,
+          "name": "color5",
+        },
+      ]
+    }
+  />
 </section>
 `;

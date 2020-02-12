@@ -6,6 +6,7 @@ exports[`ProjectFactory should render with the correct properites 1`] = `
 >
   <Project
     id={1}
+    key="1"
     name="Bathroom walls"
     palettes={
       Array [
@@ -35,6 +36,7 @@ exports[`ProjectFactory should render with the correct properites 1`] = `
   />
   <Project
     id={2}
+    key="2"
     name="Kid bedroom"
     palettes={
       Array [
@@ -54,6 +56,7 @@ exports[`ProjectFactory should render with the correct properites 1`] = `
   />
   <Project
     id={3}
+    key="3"
     name="Living room"
     palettes={Array []}
     removeProject={[MockFunction]}

@@ -1,12 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ProjectsContainer from './ProjectsContainer'
+import { ProjectsContainer } from './ProjectsContainer'
 
 describe('ProjectsContainer', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ProjectsContainer />)
+    wrapper = shallow(<ProjectsContainer
+      setAllProjects={jest.fn()}
+      />)
 
   })
 
