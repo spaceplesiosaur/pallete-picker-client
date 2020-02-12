@@ -10,7 +10,9 @@ exports[`Project should render with the correct properites 1`] = `
   <button
     className="project-delete-button"
     onClick={[Function]}
-  />
+  >
+    DELETE
+  </button>
   <div>
     <section
       className="project-palettes-palette"

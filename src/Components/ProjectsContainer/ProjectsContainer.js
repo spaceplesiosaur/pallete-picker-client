@@ -42,7 +42,7 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
   }
 
   const removeProject = async (id) => {
-    await deleteProject(id);
+    await deleteProject(id, "projects");
     return await fetchProjects();
   }
 
