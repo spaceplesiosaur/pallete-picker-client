@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
 import './SavePaletteForm.scss';
-import { postProject } from '../../apiCalls';
+import { getData, postProject } from '../../apiCalls';
 import { connect } from 'react-redux';
-export const SavePaletteForm = ({ colorList, allSetProjects }) => {
+import { setAllProjects } from '../../actions';
+import { bindActionCreators } from 'redux';
+
+export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects }) => {
    const [paletteName, setPaletteName] = useState('');
    const [projectID, setProjectID] = useState('')
     const handleSubmit = async (e) => {
         e.preventDefault();
        postPalette();
        setPaletteName('');
+    }
+    const fetchProjectsAgain = async () => {
+      const fetchedProjects = await getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects');
+      debugger
+      setAllProjects(fetchedProjects);
+    }
+    const fetchPalettesAgain = async () => {
+      await getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'projects');
+      // setPalettes(fetchedPalettes);
     }
     const postPalette = async () => {
         let completeColours = colorList.map((palette) => {
@@ -24,6 +36,8 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
             color5: completeColours[4]
           };
       await postProject('https://palette-picker-ac.herokuapp.com/api/v1/palettes', palettes, 'palettes');
+      await fetchPalettesAgain()
+      await fetchProjectsAgain()
     }
     const displayProjects = allSetProjects.map(project => {
            return (
@@ -52,4 +66,10 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
 const mapStateToProps = ({allSetProjects}) => ({
     allSetProjects
 })
-export default connect(mapStateToProps, null)(SavePaletteForm);
+
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({
+    setAllProjects
+  }, dispatch)
+);
+export default connect(mapStateToProps, mapDispatchToProps)(SavePaletteForm);

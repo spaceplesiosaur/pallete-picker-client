@@ -7,11 +7,11 @@ import { setAllProjects } from '../../actions';
 import { bindActionCreators } from 'redux';
 import './ProjectsContainer.scss';
 
-export const ProjectsContainer = ({setAllProjects}) => {
+export const ProjectsContainer = ({setAllProjects, allSetProjects, allSetPalettes}) => {
 
-  const projectState = useState([]);
-  const projects = projectState[0];
-  const setProjects = projectState[1];
+  // const projectState = useState([]);
+  // const projects = projectState[0];
+  // const setProjects = projectState[1];
 
   const paletteState = useState([]);
   const palettes = paletteState[0];
@@ -19,9 +19,9 @@ export const ProjectsContainer = ({setAllProjects}) => {
 
   const fetchProjects = async () => {
     const fetchedProjects = await getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects');
-    setProjects(fetchedProjects);
-    console.log(fetchedProjects);
+    // setProjects(fetchedProjects);
     setAllProjects(fetchedProjects);
+    // setProjects(allSetProjects)
   }
 
   const fetchPalettes = async () => {
@@ -52,9 +52,12 @@ export const ProjectsContainer = ({setAllProjects}) => {
         />
       </section>
       <section className="projectsList">
+
         <ProjectFactory
-          projects={projects}
+          projects={allSetProjects}
           palettes={palettes}
+          //set it in store in savepalettes
+          //getthisfrom store
           removeProject={removeProject}
         />
       </section>
@@ -69,4 +72,8 @@ const mapDispatchToProps = (dispatch) => (
   }, dispatch)
 );
 
-export default connect(null, mapDispatchToProps)(ProjectsContainer);
+const mapStateToProps = ({allSetProjects, allSetPalettes}) => ({
+    allSetProjects,
+    allSetPalettes
+})
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsContainer);
