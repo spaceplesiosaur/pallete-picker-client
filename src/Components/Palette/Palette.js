@@ -1,6 +1,7 @@
 import React from 'react';
 import './Palette.scss';
 import { FiLock, FiUnlock } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 
 
 const Palette = ({ name, color, frozen, freezeColor }) => {
@@ -15,5 +16,11 @@ const Palette = ({ name, color, frozen, freezeColor }) => {
   )
 };
 
+Palette.propTypes = {
+  name: PropTypes.string,
+  color: PropTypes.string,
+  frozen: PropTypes.bool,
+  freezeColor: PropTypes.func
+};
 
 export default Palette;
