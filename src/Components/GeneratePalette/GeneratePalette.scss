@@ -7,9 +7,11 @@
     font-size: 1em;
     position: relative;
     top: 14em;
+    color: #FCC606;
     cursor: pointer;
     &:hover {
       background-color: #FCC606;
       font-weight: bold;
+      color: black;
     }
 }
