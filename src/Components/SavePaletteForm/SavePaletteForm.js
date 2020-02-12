@@ -2,26 +2,29 @@ import React, { useState } from 'react';
 import './SavePaletteForm.scss';
 import { getData, postProject } from '../../apiCalls';
 import { connect } from 'react-redux';
-import { setAllProjects } from '../../actions';
+import { setAllProjects, setPalettes } from '../../actions';
 import { bindActionCreators } from 'redux';
 
-export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects }) => {
+export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects, setPalettes }) => {
    const [paletteName, setPaletteName] = useState('');
-   const [projectID, setProjectID] = useState('')
+   const [projectID, setProjectID] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
        postPalette();
        setPaletteName('');
-    }
+    };
+
     const fetchProjectsAgain = async () => {
       const fetchedProjects = await getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects');
-      debugger
       setAllProjects(fetchedProjects);
-    }
+    };
+
     const fetchPalettesAgain = async () => {
-      await getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'projects');
-      // setPalettes(fetchedPalettes);
-    }
+      const fetchedPalettes = await getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'projects');
+      setPalettes(fetchedPalettes);
+    };
+
     const postPalette = async () => {
         let completeColours = colorList.map((palette) => {
             return palette.color;
@@ -36,18 +39,22 @@ export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects }) =
             color5: completeColours[4]
           };
       await postProject('https://palette-picker-ac.herokuapp.com/api/v1/palettes', palettes, 'palettes');
-      await fetchPalettesAgain()
-      await fetchProjectsAgain()
-    }
+      await fetchPalettesAgain();
+      await fetchProjectsAgain();
+    };
+
     const displayProjects = allSetProjects.map(project => {
            return (
             <option key={project.id} value={project.id}>{project.name}</option>
            )
     });
+
     const chosenProject = (value) => {
       setProjectID(value)
-    }
+    };
+    
     const disableBtn = paletteName.length ? false : true;
+
     return (
        <form className='palette-form'>
            <select onChange={(e) => chosenProject(e.target.value)}>
@@ -69,7 +76,8 @@ const mapStateToProps = ({allSetProjects}) => ({
 
 const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
-    setAllProjects
+    setAllProjects,
+    setPalettes
   }, dispatch)
 );
 export default connect(mapStateToProps, mapDispatchToProps)(SavePaletteForm);
