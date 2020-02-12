@@ -7,7 +7,7 @@ import { setAllProjects } from '../../actions';
 import { bindActionCreators } from 'redux';
 import './ProjectsContainer.scss';
 
-const ProjectsContainer = ({setAllProjects}) => {
+export const ProjectsContainer = ({setAllProjects}) => {
 
   const projectState = useState([]);
   const projects = projectState[0];
@@ -64,7 +64,7 @@ const ProjectsContainer = ({setAllProjects}) => {
 }
 
 const mapDispatchToProps = (dispatch) => (
-  bindActionCreators({ 
+  bindActionCreators({
     setAllProjects
   }, dispatch)
 );
