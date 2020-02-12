@@ -24,7 +24,7 @@ const Project = ({ name, palettes, removeProject, id }) => {
     return (
       <section className="projectContainer-project">
         <h2>{name}</h2>
-        <button className="project-delete-button" onClick={() => removeProject(id)}></button>
+        <button className="project-delete-button" onClick={() => removeProject(id)}>DELETE</button>
         <div>{generatePalettes()}</div>
       </section>
     )
