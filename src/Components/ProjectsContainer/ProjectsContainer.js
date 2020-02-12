@@ -3,11 +3,11 @@ import ProjectsForm from '../ProjectsForm/ProjectsForm'
 import ProjectFactory from '../ProjectFactory/ProjectFactory'
 import { getData, postProject, deleteProject } from '../../apiCalls.js'
 import { connect } from 'react-redux';
-import { setAllProjects } from '../../actions';
+import { setAllProjects, setPalettes } from '../../actions';
 import { bindActionCreators } from 'redux';
 import './ProjectsContainer.scss';
 
-export const ProjectsContainer = ({setAllProjects, allSetProjects, allSetPalettes}) => {
+export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, allPalettes}) => {
 
   // const projectState = useState([]);
   // const projects = projectState[0];
@@ -15,7 +15,7 @@ export const ProjectsContainer = ({setAllProjects, allSetProjects, allSetPalette
 
   const paletteState = useState([]);
   const palettes = paletteState[0];
-  const setPalettes = paletteState[1];
+  const setPalettesStore = paletteState[1];
 
   const fetchProjects = async () => {
     const fetchedProjects = await getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects');
@@ -27,12 +27,13 @@ export const ProjectsContainer = ({setAllProjects, allSetProjects, allSetPalette
   const fetchPalettes = async () => {
     const fetchedPalettes = await getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'projects');
     setPalettes(fetchedPalettes);
+    setPalettesStore(fetchedPalettes);
   }
 
   useEffect(async () => {
-    await fetchProjects()
-    await fetchPalettes()
-  }, [])
+    await fetchProjects();
+    await fetchPalettes();
+  }, []);
 
   const makeNewProject = async (name) => {
     await postProject('https://palette-picker-ac.herokuapp.com/api/v1/projects', name, 'project');
@@ -55,9 +56,7 @@ export const ProjectsContainer = ({setAllProjects, allSetProjects, allSetPalette
 
         <ProjectFactory
           projects={allSetProjects}
-          palettes={palettes}
-          //set it in store in savepalettes
-          //getthisfrom store
+          palettes={allPalettes}
           removeProject={removeProject}
         />
       </section>
@@ -68,12 +67,13 @@ export const ProjectsContainer = ({setAllProjects, allSetProjects, allSetPalette
 
 const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
-    setAllProjects
+    setAllProjects,
+    setPalettes
   }, dispatch)
 );
 
-const mapStateToProps = ({allSetProjects, allSetPalettes}) => ({
+const mapStateToProps = ({allSetProjects, allPalettes}) => ({
     allSetProjects,
-    allSetPalettes
+    allPalettes
 })
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectsContainer);
