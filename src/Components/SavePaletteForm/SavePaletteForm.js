@@ -21,7 +21,7 @@ export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects, set
     };
 
     const fetchPalettesAgain = async () => {
-      const fetchedPalettes = await getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'projects');
+      const fetchedPalettes = await getData('https://palette-picker-ac.herokuapp.com/api/v1/palettes', 'palettes');
       setPalettes(fetchedPalettes);
     };
 
