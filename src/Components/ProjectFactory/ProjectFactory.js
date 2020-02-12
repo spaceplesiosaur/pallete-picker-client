@@ -11,6 +11,7 @@ const ProjectFactory = ({ projects, palettes, removeProject }) => {
 
       return (
         <Project
+          key={project.id}
           name={project.name}
           id={project.id}
           palettes={matchingPalettes}

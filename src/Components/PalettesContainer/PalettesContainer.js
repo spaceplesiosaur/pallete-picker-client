@@ -35,6 +35,7 @@ const PalettesContainer = () => {
   const makeColors = colorList.map((palette) => {
         return (
           <Palette
+            key={palette.name}
             freezeColor={freezeColor}
             {...palette}
         />
@@ -51,7 +52,7 @@ const PalettesContainer = () => {
               randomizeColors={randomizeColors}
             />
           </div>
-         <SavePaletteForm />
+         <SavePaletteForm colorList={colorList}/>
       </section>
     );
 }
