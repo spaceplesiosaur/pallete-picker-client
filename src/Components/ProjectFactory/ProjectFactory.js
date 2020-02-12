@@ -1,6 +1,8 @@
 import React from 'react';
 import Project from '../Project/Project';
-import './ProjectFactory.scss'
+import './ProjectFactory.scss';
+
+import PropTypes from 'prop-types';
 
 const ProjectFactory = ({ projects, palettes, removeProject }) => {
   const generateProjects = () => {
@@ -25,6 +27,12 @@ const ProjectFactory = ({ projects, palettes, removeProject }) => {
       {generateProjects()}
     </section>
   )
-}
+};
+
+ProjectFactory.propTypes = {
+  projects: PropTypes.array,
+  palettes: PropTypes.array,
+  removeProject: PropTypes.func
+};
 
 export default ProjectFactory
