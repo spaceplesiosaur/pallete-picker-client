@@ -1,6 +1,6 @@
 .generate-button {
     background: transparent;
-    border: 3px solid #B3B3F1;
+    border: 3px solid #FCC606;
     padding: 10px;
     height: 8em;
     border-radius: 50%;
@@ -9,7 +9,7 @@
     top: 14em;
     cursor: pointer;
     &:hover {
-      background-color: #B3B3F1;
+      background-color: #FCC606;
       font-weight: bold;
     }
 }
