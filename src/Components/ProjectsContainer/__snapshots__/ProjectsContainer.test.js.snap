@@ -15,6 +15,7 @@ exports[`ProjectsContainer should render with the correct properites 1`] = `
     className="projectsList"
   >
     <ProjectFactory
+      fetchProjects={[Function]}
       removeProject={[Function]}
     />
   </section>

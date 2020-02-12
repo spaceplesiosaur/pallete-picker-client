@@ -46,6 +46,11 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
     return await fetchProjects();
   }
 
+  // const removePalette = async (id) => {
+  //   await deleteProject(id, "palettes")
+  //   // return await fetchPalettes()
+  // }
+
   return (
     <section className="info-page">
       <section className="projectsForm">

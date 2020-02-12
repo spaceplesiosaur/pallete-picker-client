@@ -20,6 +20,12 @@ exports[`Project should render with the correct properites 1`] = `
       <h3>
         Ocean
       </h3>
+      <button
+        className="palette-delete-button"
+        onClick={[Function]}
+      >
+        Remove
+      </button>
       <ul>
         <li
           className="colorList-tile"
@@ -70,6 +76,12 @@ exports[`Project should render with the correct properites 1`] = `
       <h3>
         Seascape
       </h3>
+      <button
+        className="palette-delete-button"
+        onClick={[Function]}
+      >
+        Remove
+      </button>
       <ul>
         <li
           className="colorList-tile"

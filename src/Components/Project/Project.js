@@ -7,6 +7,7 @@ const Project = ({ name, palettes, removeProject, id }) => {
 
   const removePalette = async (id) => {
     await deleteProject(id, "palettes")
+    // return await fetchPalettes()
   }
 
   const generatePalettes = () => {
