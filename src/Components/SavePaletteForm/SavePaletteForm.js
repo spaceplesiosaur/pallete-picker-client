@@ -16,6 +16,7 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
         let completeColours = colorList.map((palette) => {
             return palette.color;
         });
+
         let palettes = {
             project_id: projectID,
             name: paletteName,
@@ -25,6 +26,7 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
             color4: completeColours[3],
             color5: completeColours[4]
           };
+
       await postProject('https://palette-picker-ac.herokuapp.com/api/v1/palettes', palettes, 'palettes');
     };
 
@@ -36,10 +38,9 @@ export const SavePaletteForm = ({ colorList, allSetProjects }) => {
 
     const chosenProject = (value) => {
       setProjectID(value)
-    };
+
 
     const disableBtn = paletteName.length ? false : true;
-
     return (
        <form className='palette-form'>
            <select onChange={(e) => chosenProject(e.target.value)}>
