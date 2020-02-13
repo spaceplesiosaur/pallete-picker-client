@@ -1,23 +1,562 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProjectsContainer should render with the correct properites 1`] = `
-<section
-  className="info-page"
+<ProjectsContainer
+  allPalettes={
+    Array [
+      Object {
+        "color1": "#DFE9FD",
+        "color2": "#053BA7",
+        "color3": "#B3C0F7",
+        "color4": "#4B93FB",
+        "color5": "#00A8CF",
+        "id": 4,
+        "name": "Ocean",
+        "project_id": 1,
+      },
+      Object {
+        "color1": "#180353",
+        "color2": "#00A8CF",
+        "color3": "#F7EDB7",
+        "color4": "#EDE0D7",
+        "color5": "#DFE9FD",
+        "id": 5,
+        "name": "Seascape",
+        "project_id": 1,
+      },
+      Object {
+        "color1": "#FA1E88",
+        "color2": "#ff6100",
+        "color3": "#F8DF3A",
+        "color4": "#B3C0F7",
+        "color5": "#000000",
+        "id": 6,
+        "name": "Sunset",
+        "project_id": 2,
+      },
+    ]
+  }
+  allSetProjects={
+    Array [
+      Object {
+        "current": true,
+        "id": 1,
+        "name": "Bathroom walls",
+      },
+      Object {
+        "current": false,
+        "id": 2,
+        "name": "Kid bedroom",
+      },
+      Object {
+        "current": false,
+        "id": 3,
+        "name": "Living room",
+      },
+      Object {
+        "current": false,
+        "id": 4,
+        "name": "Dining room",
+      },
+    ]
+  }
+  setAllProjects={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          undefined,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  setPalettes={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          undefined,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <section
-    className="projectsForm"
+    className="info-page"
   >
-    <ProjectsForm
-      addNewProject={[Function]}
-    />
+    <section
+      className="projectsForm"
+    >
+      <ProjectsForm
+        addNewProject={[Function]}
+      >
+        <section
+          className="projects-name-form"
+        >
+          <h2>
+            Create New Project
+          </h2>
+          <div
+            className="formBox"
+          >
+            <label
+              for="name"
+            >
+              Name
+            </label>
+            <input
+              className="formInput"
+              name="name"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <button
+              className="saveProjectButton"
+              onClick={[Function]}
+            >
+              Save Project
+            </button>
+          </div>
+        </section>
+      </ProjectsForm>
+    </section>
+    <section
+      className="projectsList"
+    >
+      <ProjectFactory
+        fetchPalettes={[Function]}
+        palettes={
+          Array [
+            Object {
+              "color1": "#DFE9FD",
+              "color2": "#053BA7",
+              "color3": "#B3C0F7",
+              "color4": "#4B93FB",
+              "color5": "#00A8CF",
+              "id": 4,
+              "name": "Ocean",
+              "project_id": 1,
+            },
+            Object {
+              "color1": "#180353",
+              "color2": "#00A8CF",
+              "color3": "#F7EDB7",
+              "color4": "#EDE0D7",
+              "color5": "#DFE9FD",
+              "id": 5,
+              "name": "Seascape",
+              "project_id": 1,
+            },
+            Object {
+              "color1": "#FA1E88",
+              "color2": "#ff6100",
+              "color3": "#F8DF3A",
+              "color4": "#B3C0F7",
+              "color5": "#000000",
+              "id": 6,
+              "name": "Sunset",
+              "project_id": 2,
+            },
+          ]
+        }
+        projects={
+          Array [
+            Object {
+              "current": true,
+              "id": 1,
+              "name": "Bathroom walls",
+            },
+            Object {
+              "current": false,
+              "id": 2,
+              "name": "Kid bedroom",
+            },
+            Object {
+              "current": false,
+              "id": 3,
+              "name": "Living room",
+            },
+            Object {
+              "current": false,
+              "id": 4,
+              "name": "Dining room",
+            },
+          ]
+        }
+        removeProject={[Function]}
+      >
+        <section
+          className="project-factory-renderArea"
+        >
+          <Project
+            fetchPalettes={[Function]}
+            id={1}
+            key="1"
+            name="Bathroom walls"
+            palettes={
+              Array [
+                Object {
+                  "color1": "#DFE9FD",
+                  "color2": "#053BA7",
+                  "color3": "#B3C0F7",
+                  "color4": "#4B93FB",
+                  "color5": "#00A8CF",
+                  "id": 4,
+                  "name": "Ocean",
+                  "project_id": 1,
+                },
+                Object {
+                  "color1": "#180353",
+                  "color2": "#00A8CF",
+                  "color3": "#F7EDB7",
+                  "color4": "#EDE0D7",
+                  "color5": "#DFE9FD",
+                  "id": 5,
+                  "name": "Seascape",
+                  "project_id": 1,
+                },
+              ]
+            }
+            removeProject={[Function]}
+          >
+            <section
+              className="projectContainer-project"
+            >
+              <h2>
+                Bathroom walls
+              </h2>
+              <button
+                className="project-delete-button"
+                onClick={[Function]}
+              >
+                DELETE
+              </button>
+              <div>
+                <section
+                  className="project-palettes-palette"
+                >
+                  <h3>
+                    Ocean
+                  </h3>
+                  <button
+                    className="palette-delete-button"
+                    onClick={[Function]}
+                  >
+                    Remove
+                  </button>
+                  <ul>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#DFE9FD",
+                        }
+                      }
+                    >
+                      <span>
+                        #DFE9FD
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#053BA7",
+                        }
+                      }
+                    >
+                      <span>
+                        #053BA7
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#B3C0F7",
+                        }
+                      }
+                    >
+                      <span>
+                        #B3C0F7
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#4B93FB",
+                        }
+                      }
+                    >
+                      <span>
+                        #4B93FB
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#00A8CF",
+                        }
+                      }
+                    >
+                      <span>
+                        #00A8CF
+                      </span>
+                    </li>
+                  </ul>
+                </section>
+                <section
+                  className="project-palettes-palette"
+                >
+                  <h3>
+                    Seascape
+                  </h3>
+                  <button
+                    className="palette-delete-button"
+                    onClick={[Function]}
+                  >
+                    Remove
+                  </button>
+                  <ul>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#180353",
+                        }
+                      }
+                    >
+                      <span>
+                        #180353
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#00A8CF",
+                        }
+                      }
+                    >
+                      <span>
+                        #00A8CF
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#F7EDB7",
+                        }
+                      }
+                    >
+                      <span>
+                        #F7EDB7
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#EDE0D7",
+                        }
+                      }
+                    >
+                      <span>
+                        #EDE0D7
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#DFE9FD",
+                        }
+                      }
+                    >
+                      <span>
+                        #DFE9FD
+                      </span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </Project>
+          <Project
+            fetchPalettes={[Function]}
+            id={2}
+            key="2"
+            name="Kid bedroom"
+            palettes={
+              Array [
+                Object {
+                  "color1": "#FA1E88",
+                  "color2": "#ff6100",
+                  "color3": "#F8DF3A",
+                  "color4": "#B3C0F7",
+                  "color5": "#000000",
+                  "id": 6,
+                  "name": "Sunset",
+                  "project_id": 2,
+                },
+              ]
+            }
+            removeProject={[Function]}
+          >
+            <section
+              className="projectContainer-project"
+            >
+              <h2>
+                Kid bedroom
+              </h2>
+              <button
+                className="project-delete-button"
+                onClick={[Function]}
+              >
+                DELETE
+              </button>
+              <div>
+                <section
+                  className="project-palettes-palette"
+                >
+                  <h3>
+                    Sunset
+                  </h3>
+                  <button
+                    className="palette-delete-button"
+                    onClick={[Function]}
+                  >
+                    Remove
+                  </button>
+                  <ul>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#FA1E88",
+                        }
+                      }
+                    >
+                      <span>
+                        #FA1E88
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#ff6100",
+                        }
+                      }
+                    >
+                      <span>
+                        #ff6100
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#F8DF3A",
+                        }
+                      }
+                    >
+                      <span>
+                        #F8DF3A
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#B3C0F7",
+                        }
+                      }
+                    >
+                      <span>
+                        #B3C0F7
+                      </span>
+                    </li>
+                    <li
+                      className="colorList-tile"
+                      style={
+                        Object {
+                          "backgroundColor": "#000000",
+                        }
+                      }
+                    >
+                      <span>
+                        #000000
+                      </span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </Project>
+          <Project
+            fetchPalettes={[Function]}
+            id={3}
+            key="3"
+            name="Living room"
+            palettes={Array []}
+            removeProject={[Function]}
+          >
+            <section
+              className="projectContainer-project"
+            >
+              <h2>
+                Living room
+              </h2>
+              <button
+                className="project-delete-button"
+                onClick={[Function]}
+              >
+                DELETE
+              </button>
+              <div />
+            </section>
+          </Project>
+          <Project
+            fetchPalettes={[Function]}
+            id={4}
+            key="4"
+            name="Dining room"
+            palettes={Array []}
+            removeProject={[Function]}
+          >
+            <section
+              className="projectContainer-project"
+            >
+              <h2>
+                Dining room
+              </h2>
+              <button
+                className="project-delete-button"
+                onClick={[Function]}
+              >
+                DELETE
+              </button>
+              <div />
+            </section>
+          </Project>
+        </section>
+      </ProjectFactory>
+    </section>
   </section>
-  <section
-    className="projectsList"
-  >
-    <ProjectFactory
-      fetchPalettes={[Function]}
-      removeProject={[Function]}
-    />
-  </section>
-</section>
+</ProjectsContainer>
 `;
