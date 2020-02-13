@@ -2,7 +2,7 @@
 
 exports[`ProjectsContainer should render with the correct properites 1`] = `
 <section
-  className="project-info-page"
+  className="info-page"
 >
   <section
     className="projectsForm"
@@ -15,8 +15,7 @@ exports[`ProjectsContainer should render with the correct properites 1`] = `
     className="projectsList"
   >
     <ProjectFactory
-      palettes={Array []}
-      projects={Array []}
+      fetchPalettes={[Function]}
       removeProject={[Function]}
     />
   </section>

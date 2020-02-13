@@ -42,9 +42,14 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
   }
 
   const removeProject = async (id) => {
-    await deleteProject(id);
+    await deleteProject(id, "projects");
     return await fetchProjects();
   }
+
+  // const removePalette = async (id) => {
+  //   await deleteProject(id, "palettes")
+  //   // return await fetchPalettes()
+  // }
 
   return (
     <section className="info-page">
@@ -59,6 +64,7 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
           projects={allSetProjects}
           palettes={allPalettes}
           removeProject={removeProject}
+          fetchPalettes={fetchPalettes}
         />
       </section>
     </section>

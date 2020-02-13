@@ -134,12 +134,12 @@ describe('deleteProject', () => {
 
   it('should be passed down the correct URL', () => {
     let options = mockDeleteOptions;
-    deleteProject(mockProject.id, options)
+    deleteProject(mockProject.id, "projects", options)
     expect(window.fetch).toHaveBeenCalledWith('https://palette-picker-ac.herokuapp.com/api/v1/projects/1', options)
   })
   it('should return a confirmation message', () => {
     let options = mockDeleteOptions;
-    expect(deleteProject(mockProject.id, options)).resolves.toEqual('Post deleted!')
+    expect(deleteProject(mockProject.id, "projects", options)).resolves.toEqual('Post deleted!')
   })
   it('should throw an error if the response is not ok', () => {
     let options = mockDeleteOptions;
@@ -151,6 +151,6 @@ describe('deleteProject', () => {
         }
       })
     })
-    expect(deleteProject(mockProject.id, options)).rejects.toEqual(Error('There was a problem with the delete'))
+    expect(deleteProject(mockProject.id, "projects", options)).rejects.toEqual(Error('There was a problem with the delete'))
   })
 })

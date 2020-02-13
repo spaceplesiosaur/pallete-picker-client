@@ -25,14 +25,14 @@ export const postProject = async (url, body, type) => {
     return newProject;
 }
 
-export const deleteProject = (id) => {
+export const deleteProject = (id, type) => {
   const options = {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
     }
   }
-  const deleteAction = fetch(`https://palette-picker-ac.herokuapp.com/api/v1/projects/${id}`, options).then(response => {
+  const deleteAction = fetch(`https://palette-picker-ac.herokuapp.com/api/v1/${type}/${id}`, options).then(response => {
     if (!response.ok) {
           throw Error('There was a problem with the delete')
         }

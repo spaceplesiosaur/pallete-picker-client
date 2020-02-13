@@ -4,7 +4,7 @@ import './ProjectFactory.scss';
 
 import PropTypes from 'prop-types';
 
-const ProjectFactory = ({ projects, palettes, removeProject }) => {
+const ProjectFactory = ({ projects, palettes, removeProject, fetchPalettes }) => {
   const generateProjects = () => {
     return projects.map(project => {
       const matchingPalettes = palettes.filter(palette => {
@@ -18,6 +18,7 @@ const ProjectFactory = ({ projects, palettes, removeProject }) => {
           id={project.id}
           palettes={matchingPalettes}
           removeProject={removeProject}
+          fetchPalettes={fetchPalettes}
         />
       )
     })
@@ -32,7 +33,8 @@ const ProjectFactory = ({ projects, palettes, removeProject }) => {
 ProjectFactory.propTypes = {
   projects: PropTypes.array,
   palettes: PropTypes.array,
-  removeProject: PropTypes.func
+  removeProject: PropTypes.func,
+  fetchPalettes: PropTypes.func
 };
 
 export default ProjectFactory
