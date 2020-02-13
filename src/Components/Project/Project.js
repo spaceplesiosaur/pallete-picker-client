@@ -18,8 +18,6 @@ const Project = ({ name, palettes, removeProject, id, fetchPalettes }) => {
         <li className="colorList-tile" style={{backgroundColor: `${color}`}} key={Object.key}><span>{color}</span></li>
         )
       });
-      
-      console.log({palette})
 
       return ( 
         <section className="project-palettes-palette">
@@ -31,15 +29,12 @@ const Project = ({ name, palettes, removeProject, id, fetchPalettes }) => {
     })
     };
 
-    const showHexs = (colors) => {
-      console.log(showHexs);
-    };
 
     return (
       <section className="projectContainer-project">
         <h2>{name}</h2>
         <button className="project-delete-button" onClick={() => removeProject(id)}>DELETE</button>
-        <div onClick={() => showHexs()}>{generatePalettes()}</div>
+        <div>{generatePalettes()}</div>
       </section>
     )
 };

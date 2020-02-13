@@ -34,7 +34,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#DFE9FD",
             }
           }
-        />
+        >
+          <span>
+            #DFE9FD
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -42,7 +46,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#053BA7",
             }
           }
-        />
+        >
+          <span>
+            #053BA7
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -50,7 +58,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#B3C0F7",
             }
           }
-        />
+        >
+          <span>
+            #B3C0F7
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -58,7 +70,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#4B93FB",
             }
           }
-        />
+        >
+          <span>
+            #4B93FB
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -66,7 +82,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#00A8CF",
             }
           }
-        />
+        >
+          <span>
+            #00A8CF
+          </span>
+        </li>
       </ul>
     </section>
     <section
@@ -89,7 +109,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#180353",
             }
           }
-        />
+        >
+          <span>
+            #180353
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -97,7 +121,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#00A8CF",
             }
           }
-        />
+        >
+          <span>
+            #00A8CF
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -105,7 +133,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#F7EDB7",
             }
           }
-        />
+        >
+          <span>
+            #F7EDB7
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -113,7 +145,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#EDE0D7",
             }
           }
-        />
+        >
+          <span>
+            #EDE0D7
+          </span>
+        </li>
         <li
           className="colorList-tile"
           style={
@@ -121,7 +157,11 @@ exports[`Project should render with the correct properites 1`] = `
               "backgroundColor": "#DFE9FD",
             }
           }
-        />
+        >
+          <span>
+            #DFE9FD
+          </span>
+        </li>
       </ul>
     </section>
   </div>

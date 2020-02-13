@@ -13,7 +13,7 @@ export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects, set
 
     const handleSubmit = async (e) => {
         e.preventDefault(); 
-       postPalette();
+       postPalette(); 
        setPaletteName('');
     };
 
@@ -72,11 +72,11 @@ export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects, set
        </form>
     )
 };
-const mapStateToProps = ({allSetProjects}) => ({
+export const mapStateToProps = ({allSetProjects}) => ({
     allSetProjects
 })
 
-const mapDispatchToProps = (dispatch) => (
+export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     setAllProjects,
     setPalettes

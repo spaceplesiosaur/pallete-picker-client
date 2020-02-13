@@ -10,9 +10,6 @@ import PropTypes from 'prop-types';
 
 export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, allPalettes}) => {
 
-  // const projectState = useState([]);
-  // const projects = projectState[0];
-  // const setProjects = projectState[1];
 
   const paletteState = useState([]);
   const palettes = paletteState[0];
@@ -20,9 +17,7 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
 
   const fetchProjects = async () => {
     const fetchedProjects = await getData('https://palette-picker-ac.herokuapp.com/api/v1/projects', 'projects');
-    // setProjects(fetchedProjects);
     setAllProjects(fetchedProjects);
-    // setProjects(allSetProjects)
   }
 
   const fetchPalettes = async () => {
@@ -46,11 +41,6 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
     return await fetchProjects();
   }
 
-  // const removePalette = async (id) => {
-  //   await deleteProject(id, "palettes")
-  //   // return await fetchPalettes()
-  // }
-
   return (
     <section className="info-page">
       <section className="projectsForm">
@@ -72,14 +62,14 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
 
 }
 
-const mapDispatchToProps = (dispatch) => (
+export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     setAllProjects,
     setPalettes
   }, dispatch)
 );
 
-const mapStateToProps = ({allSetProjects, allPalettes}) => ({
+export const mapStateToProps = ({allSetProjects, allPalettes}) => ({
     allSetProjects,
     allPalettes
 });
