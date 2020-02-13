@@ -62,14 +62,14 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
 
 }
 
-const mapDispatchToProps = (dispatch) => (
+export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     setAllProjects,
     setPalettes
   }, dispatch)
 );
 
-const mapStateToProps = ({allSetProjects, allPalettes}) => ({
+export const mapStateToProps = ({allSetProjects, allPalettes}) => ({
     allSetProjects,
     allPalettes
 });
