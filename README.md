@@ -37,6 +37,7 @@ And to view on your local browser:
 - Knex 
 - [Palette Picker API built by us](https://github.com/spaceplesiosaur/palette-picker)
 
+![Palette Picker Screenshot](https://github.com/spaceplesiosaur/pallete-picker-client/blob/master/Screenshot%202020-02-12%20at%2022.05.59.png)
 ![Palette Picker App](https://media.giphy.com/media/STlg4l8NohwLz0CJoc/giphy.gif)
 ![Palette Picker App](https://media.giphy.com/media/Tk1egjTljpT4ll8d9o/giphy.gif)
 ![Palette Picker App](https://media.giphy.com/media/jskVWCAA1ljUjdqcjk/giphy.gif)
