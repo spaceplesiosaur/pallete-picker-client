@@ -32,4 +32,7 @@ And to view on your local browser:
 - SCSS
 - [Palette Picker API built by us](https://github.com/spaceplesiosaur/palette-picker)
 
-![Pallete Picker Screenshot]()
+![Palette Picker App](https://media.giphy.com/media/STlg4l8NohwLz0CJoc/giphy.gif)
+![Palette Picker App](https://media.giphy.com/media/Tk1egjTljpT4ll8d9o/giphy.gif)
+![Palette Picker App](https://media.giphy.com/media/jskVWCAA1ljUjdqcjk/giphy.gif)
+
