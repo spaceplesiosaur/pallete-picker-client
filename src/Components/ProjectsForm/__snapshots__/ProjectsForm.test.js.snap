@@ -1,33 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProjectsForm should render with the correct properites 1`] = `
-<section
-  className="projects-name-form"
+<ProjectsForm
+  addNewProject={[MockFunction]}
 >
-  <h2>
-    Create New Project
-  </h2>
-  <div
-    className="formBox"
+  <section
+    className="projects-name-form"
   >
-    <label
-      for="name"
+    <h2>
+      Create New Project
+    </h2>
+    <div
+      className="formBox"
     >
-      Name
-    </label>
-    <input
-      className="formInput"
-      name="name"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <button
-      className="saveProjectButton"
-      onClick={[Function]}
-    >
-      Save Project
-    </button>
-  </div>
-</section>
+      <label
+        for="name"
+      >
+        Name
+      </label>
+      <input
+        className="formInput"
+        name="name"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <button
+        className="saveProjectButton"
+        onClick={[Function]}
+      >
+        Save Project
+      </button>
+    </div>
+  </section>
+</ProjectsForm>
 `;

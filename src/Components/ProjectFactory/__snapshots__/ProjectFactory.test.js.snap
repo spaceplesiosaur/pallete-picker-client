@@ -5,6 +5,7 @@ exports[`ProjectFactory should render with the correct properites 1`] = `
   className="project-factory-renderArea"
 >
   <Project
+    fetchPalettes={[MockFunction]}
     id={1}
     key="1"
     name="Bathroom walls"
@@ -35,6 +36,7 @@ exports[`ProjectFactory should render with the correct properites 1`] = `
     removeProject={[MockFunction]}
   />
   <Project
+    fetchPalettes={[MockFunction]}
     id={2}
     key="2"
     name="Kid bedroom"
@@ -55,6 +57,7 @@ exports[`ProjectFactory should render with the correct properites 1`] = `
     removeProject={[MockFunction]}
   />
   <Project
+    fetchPalettes={[MockFunction]}
     id={3}
     key="3"
     name="Living room"
