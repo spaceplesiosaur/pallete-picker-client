@@ -33,7 +33,7 @@ const ProjectFactory = ({ projects, palettes, removeProject, fetchPalettes }) =>
 ProjectFactory.propTypes = {
   projects: PropTypes.array,
   palettes: PropTypes.array,
-  removeProject: PropTypes.func.
+  removeProject: PropTypes.func,
   fetchPalettes: PropTypes.func
 };
 
