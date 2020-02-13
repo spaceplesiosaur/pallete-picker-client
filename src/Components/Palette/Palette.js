@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const Palette = ({ name, color, frozen, freezeColor }) => {
 
    const toggleIcon = frozen ? <FiLock /> : <FiUnlock />;
-
+ 
   return (
     <section className='palette' style={{backgroundColor:`${color}`}} onClick={() => freezeColor(name)}>
       {toggleIcon }

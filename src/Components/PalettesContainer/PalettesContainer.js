@@ -31,7 +31,7 @@ const PalettesContainer = () => {
 
      changeColor(newColors);
   }
-
+ 
   const makeColors = colorList.map((palette) => {
         return (
           <Palette
