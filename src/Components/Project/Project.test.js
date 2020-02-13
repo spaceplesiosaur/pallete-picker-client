@@ -1,14 +1,22 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { getData, deleteProject } from '../../apiCalls.js'
 import Project from './Project'
+
+jest.mock('../../apiCalls.js')
 
 describe('Project', () => {
   let wrapper;
   let mockProject;
   let mockMatchedPalettes;
   let fakeRemoveFunction = jest.fn()
+  let fakePaletteFetcher = jest.fn()
 
   beforeEach(() => {
+    // deleteProject = jest.fn().mockImplementation(() => {
+    //   return Promise.resolve('Post deleted!')
+    // })
+
     mockProject = {
       id: 1,
       name: "Bathroom walls",
@@ -42,6 +50,7 @@ describe('Project', () => {
       id={mockProject.id}
       palettes={mockMatchedPalettes}
       removeProject={fakeRemoveFunction}
+      fetchPalettes={fakePaletteFetcher}
        />)
 
   })
@@ -54,5 +63,11 @@ describe('Project', () => {
     wrapper.find('.project-delete-button').simulate('click')
 
     expect(fakeRemoveFunction).toHaveBeenCalled()
+  })
+
+  it('should re-fetch palettes when palette remove button is clicked', async() => {
+    await wrapper.find('.palette-delete-button').at(1).simulate('click')
+
+    expect(fakePaletteFetcher).toHaveBeenCalled()
   })
 })

@@ -63,6 +63,7 @@ describe('ProjectFactory', () => {
       projects={mockProjects}
       palettes={mockPalettes}
       removeProject={jest.fn()}
+      fetchPalettes={jest.fn()}
       />)
 
   })
