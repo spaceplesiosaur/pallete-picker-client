@@ -64,6 +64,7 @@ export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, 
           projects={allSetProjects}
           palettes={allPalettes}
           removeProject={removeProject}
+          fetchPalettes={fetchPalettes}
         />
       </section>
     </section>

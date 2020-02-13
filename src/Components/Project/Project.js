@@ -3,11 +3,11 @@ import { getData, deleteProject } from '../../apiCalls.js'
 import './Project.scss'
 import PropTypes from 'prop-types';
 
-const Project = ({ name, palettes, removeProject, id }) => {
+const Project = ({ name, palettes, removeProject, id, fetchPalettes }) => {
 
   const removePalette = async (id) => {
     await deleteProject(id, "palettes")
-    // return await fetchPalettes()
+    await fetchPalettes()
   }
 
   const generatePalettes = () => {
