@@ -41,7 +41,8 @@ Project.propTypes = {
   name: PropTypes.string,
   palettes: PropTypes.array,
   removeProject: PropTypes.func,
-  id: PropTypes.number
+  id: PropTypes.number,
+  fetchPalettes: PropTypes.func
 };
 
 export default Project
