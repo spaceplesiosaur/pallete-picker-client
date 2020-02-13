@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './ProjectsForm.scss';
 
-const ProjectsForm = ({ addNewProject }) => {
+import PropTypes from 'prop-types';
+
+const ProjectsForm = ({ addNewProject }) => { 
 
   const nameState = useState('')
   const name = nameState[0]
@@ -25,6 +27,10 @@ const ProjectsForm = ({ addNewProject }) => {
       </div>
     </section>
   )
+};
+
+ProjectsForm.propTypes = {
+  addNewProject: PropTypes.func
 }
 
 export default ProjectsForm

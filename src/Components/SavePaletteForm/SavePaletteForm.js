@@ -5,12 +5,14 @@ import { connect } from 'react-redux';
 import { setAllProjects, setPalettes } from '../../actions';
 import { bindActionCreators } from 'redux';
 
+import PropTypes from 'prop-types';
+
 export const SavePaletteForm = ({ colorList, allSetProjects, setAllProjects, setPalettes }) => {
    const [paletteName, setPaletteName] = useState('');
    const [projectID, setProjectID] = useState('');
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
        postPalette();
        setPaletteName('');
     };
@@ -80,4 +82,12 @@ const mapDispatchToProps = (dispatch) => (
     setPalettes
   }, dispatch)
 );
+
+SavePaletteForm.propTypes = {
+  colorList: PropTypes.array,
+  allSetProjects: PropTypes.array,
+  setAllProjects: PropTypes.func,
+  setPalettes: PropTypes.func
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(SavePaletteForm);

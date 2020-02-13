@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { setAllProjects, setPalettes } from '../../actions';
 import { bindActionCreators } from 'redux';
 import './ProjectsContainer.scss';
+import PropTypes from 'prop-types';
 
 export const ProjectsContainer = ({setAllProjects, setPalettes ,allSetProjects, allPalettes}) => {
 
@@ -75,5 +76,13 @@ const mapDispatchToProps = (dispatch) => (
 const mapStateToProps = ({allSetProjects, allPalettes}) => ({
     allSetProjects,
     allPalettes
-})
+});
+
+ProjectsContainer.propTypes = {
+  setAllProjects: PropTypes.func,
+  setPalettes: PropTypes.func,
+  allSetProjects: PropTypes.array,
+  allPalettes: PropTypes.array
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectsContainer);

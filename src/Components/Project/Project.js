@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { getData } from '../../apiCalls.js'
-import './Project.scss'
+import React, { useState, useEffect } from 'react';
+import { getData } from '../../apiCalls.js';
+import './Project.scss';
+
+import PropTypes from 'prop-types';
+
 
 const Project = ({ name, palettes, removeProject, id }) => {
   const generatePalettes = () => {
@@ -15,7 +18,6 @@ const Project = ({ name, palettes, removeProject, id }) => {
         <section className="project-palettes-palette">
           <h3>{palette.name}</h3>
           <ul>{generateColors}</ul>
-          <img></img>
         </section>
       )
     })
@@ -28,6 +30,13 @@ const Project = ({ name, palettes, removeProject, id }) => {
         <div>{generatePalettes()}</div>
       </section>
     )
-  }
+};
+
+Project.propTypes = {
+  name: PropTypes.string,
+  palettes: PropTypes.array,
+  removeProject: PropTypes.func,
+  id: PropTypes.number
+};
 
 export default Project
