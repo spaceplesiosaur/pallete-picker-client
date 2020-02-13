@@ -68,7 +68,6 @@ exports[`Project should render with the correct properites 1`] = `
           }
         />
       </ul>
-      <img />
     </section>
     <section
       className="project-palettes-palette"
@@ -124,7 +123,6 @@ exports[`Project should render with the correct properites 1`] = `
           }
         />
       </ul>
-      <img />
     </section>
   </div>
 </section>
