@@ -1,6 +1,6 @@
 # Palette Picker
 
-Palette Picker is a Full-Stack app that allows users to store their favourite palettes for different projects they, colours they would like to paint their bedrooms or inspo colours the user would like for example a holiday like Dia De Los Muertos.
+Palette Picker is a Full-Stack app that allows users to store their favourite palettes for different projects they, colours they would like to paint their bedrooms or inspo colours the user would like for example a holiday like dia de Los Muertos.
 
 *[Check out Palette Picker live](https://palette-picker-ac-client.herokuapp.com)*
 
